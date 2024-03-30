@@ -9,7 +9,10 @@ class RecipeDetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(recipe['strMeal']),
+        title: Text(
+          'My Recipe App',
+          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+        ),
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(16.0),

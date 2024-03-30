@@ -41,7 +41,9 @@ class _RecipeListPageState extends State<RecipeListPage> {
         itemCount: recipes.length,
         itemBuilder: (context, index) {
           // Calculate a color based on the index
-          Color? color = index % 2 == 0 ? Colors.grey[200] : Colors.grey[300];
+          Color? color = index % 2 == 0
+              ? Color.fromARGB(255, 232, 229, 224)
+              : Colors.grey[300];
 
           return Column(
             children: [
@@ -56,7 +58,7 @@ class _RecipeListPageState extends State<RecipeListPage> {
                             fit: BoxFit.cover,
                           ),
                         )
-                      : SizedBox.shrink(),
+                      : SizedBox.fromSize(),
                   onTap: () {
                     Navigator.push(
                       context,
@@ -68,7 +70,7 @@ class _RecipeListPageState extends State<RecipeListPage> {
                   },
                 ),
               ),
-              SizedBox(height: 10), // Adding spacing between list items
+              SizedBox(height: 3), // Adding spacing between list items
             ],
           );
         },

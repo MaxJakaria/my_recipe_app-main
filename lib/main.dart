@@ -8,13 +8,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'My Recipe App', // Set the title here
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return Center(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'My Recipe App', // Set the title here
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: RecipeListPage(),
       ),
-      home: RecipeListPage(),
     );
   }
 }
